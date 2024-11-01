@@ -1,0 +1,287 @@
+/*
+* Styles for administration interface.
+*/
+
+/* icons font */
+@font-face {
+	font-family: 'wpvgwicons';
+	src: url('../fonts/wpvgwicons.eot?wrxdm4');
+	src: url('../fonts/wpvgwicons.eot?wrxdm4#iefix') format('embedded-opentype'),
+	url('../fonts/wpvgwicons.ttf?wrxdm4') format('truetype'),
+	url('../fonts/wpvgwicons.woff?wrxdm4') format('woff'),
+	url('../fonts/wpvgwicons.svg?wrxdm4#wpvgwicons') format('svg');
+	font-weight: normal;
+	font-style: normal;
+	font-display: block;
+}
+
+/* menu icon */
+.dashicons-admin-wpvgw:before {
+	content: "\e900";
+	font-family: 'wpvgwicons', sans-serif;
+}
+
+/* common */
+
+a.wpvgw-disabled {
+	color: gray;
+	cursor: default;
+	border: none;
+	box-shadow: none;
+}
+
+.wpvgw-warning-notice {
+	color: #e5a800;
+	font-weight: bold;
+}
+
+.wpvgw-inline-code {
+	font-family: monospace;
+}
+
+/* posts table */
+
+.column-wpvgw_posts_extras_character_count {
+	width: 14%;
+}
+
+.column-wpvgw_posts_extras_character_count .wpvgw-has-marker {
+	color: #008000;
+}
+
+.column-wpvgw_posts_extras_character_count .wpvgw-marker-possible {
+	color: #A00000;
+}
+
+/* admin view */
+p.wpvgw-configuration-sub {
+	margin-left: 2em;
+}
+
+/* markers table */
+
+form#wpvgw-markers .tablenav select option:first-child {
+	font-style: italic;
+}
+
+table.wpvgw_markers .column-marker_state,
+table.wpvgw_markers .column-post_date,
+table.wpvgw_markers .column-e_character_count,
+table.wpvgw_markers .column-up_display_name,
+table.wpvgw_markers .column-um_display_name,
+table.wpvgw_markers .column-order_date {
+	width: 10%;
+}
+
+table.wpvgw_markers .column-marker {
+	cursor: text;
+	width: 20em;
+}
+
+table.wpvgw_markers .wpvgw-invalid-data {
+	color: #aa0000;
+}
+
+table.wpvgw_markers .wpvgw-marker-disabled {
+	color: #aaaaaa;
+}
+
+table.wpvgw_markers .wpvgw-marker-disabled > a:link {
+	color: #aaaaaa;
+}
+
+#wpvgw-markers-view-copy-window-background {
+	position: fixed;
+	display: none;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background-color: rgba(0, 0, 0, 0.20);
+	z-index: 99997; /* WordPress Admin bar is 99999 */
+}
+
+#wpvgw-markers-view-copy-window {
+	padding: 1em;
+	margin: 50px;
+	/*noinspection CssOverwrittenProperties*/
+	height: 70%; /* just a fallback */
+	/*noinspection CssOverwrittenProperties*/
+	height: calc(100% - 100px); /* 100% - margin-top + margin-bottom */
+	overflow: auto;
+	background-color: #ffffff;
+	z-index: 99998; /* 1 more than background */
+	box-shadow: 0 10px 18px 8px rgba(0, 0, 0, 0.75);
+}
+
+#wpvgw-markers-view-post-title {
+	font-size: 2.5em;
+	margin-top: 1em;
+	margin-bottom: 0.7em;
+}
+
+#wpvgw-markers-view-post-content-loading {
+	text-align: center;
+	font-size: 2em;
+}
+
+div.wpvgw-markers-bulk-edit {
+	clear: both;
+	background-color: #ffffff;
+	border: 1px solid #e5e5e5;
+	padding: 0 1em;
+	margin: 0.5em 0;
+}
+
+/* list box with checkboxes */
+
+.wpvgw-check-list-box {
+	background-color: #ffffff;
+	border: 1px solid #dddddd;
+	height: 12em;
+	margin: 0;
+	overflow-y: scroll;
+	padding: 0 5px;
+	width: 30em;
+}
+
+.wpvgw-check-list-box li:first-child {
+	margin-top: 6px;
+}
+
+.wpvgw-check-list-box li.wpvgw-invalid {
+	color: #aa0000;
+}
+
+#wpvgw_refresh_character_count_spinner {
+	margin: 0;
+}
+
+/* text boxes like */
+
+.wpvgw-quote-text {
+	background-color: #ffffff;
+	border: 1px solid #dddddd;
+	margin: 4px 0 0 0;
+	overflow-y: scroll;
+	padding: 0 10px;
+	max-width: 60em;
+	height: 30em;
+}
+
+.wpvgw-quote-text ul {
+	list-style: disc;
+	margin-left: 2em;
+}
+
+.wpvgw-quote-text ul ul {
+	list-style: circle;
+	margin-left: 2em;
+}
+
+/* about page */
+
+.wpvgw-about-logo {
+	float: right;
+}
+
+/* form table */
+
+.wpvgw-form-table td > p, .wpvgw-admin-page-description {
+	max-width: 50em;
+}
+
+/* description and description icon (button) */
+
+.wpvgw-description-button, .wpvgw-warning-description-button {
+	text-decoration: none;
+	font-family: 'wpvgwicons', sans-serif;
+	padding-left: 0.3em;
+	padding-right: 0.3em;
+	color: inherit;
+	opacity: 0.8;
+	vertical-align: middle;
+}
+
+.wpvgw-warning-description-button {
+	color: #e5a800;
+	opacity: 1;
+}
+
+span.wpvgw-description, span.wpvgw-warning-description, span.wpvgw-description-important {
+	display: block;
+}
+
+span.wpvgw-warning-description {
+	color: #e5a800;
+	display: block;
+}
+
+/* progress window */
+
+#wpvgw-task-window-background {
+	position: fixed;
+	display: none;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background-color: rgba(0, 0, 0, 0.20);
+	z-index: 100000; /* WordPress Admin bar is 99999 */
+}
+
+#wpvgw-task-window {
+	position: fixed;
+	margin: auto auto auto -18em;
+	width: 36em;
+	left: 50%;
+	top: 20%;
+	height: 18.5em;
+	overflow: auto;
+	padding: 1em;
+	background-color: #ffffff;
+	z-index: 100001; /* 1 more than background */
+	box-shadow: 0 10px 18px 8px rgba(0, 0, 0, 0.75);
+}
+
+div.wpvgw-progress-message-update, div.wpvgw-progress-message-error {
+	/*border-left: 4px solid #fff;*/
+	padding: 1px 12px;
+	margin-bottom: 5px;
+	background: none;
+	box-shadow: none;
+}
+
+div.wpvgw-progress-message-update:first-child, div.wpvgw-progress-message-error:first-child {
+	margin-top: 0;
+}
+
+#wpvgw-task-window-title {
+	font-weight: 600;
+	font-size: 1.1em;
+	margin-bottom: 1.6em;
+}
+
+#wpvgw-task-window-spinner {
+	margin: 0;
+	display: none;
+	visibility: visible;
+	float: right;
+}
+
+#wpvgw-task-window-content {
+	clear: both;
+	height: 11.7em;
+	overflow-y: auto;
+}
+
+#wpvgw-task-window-content p:first-child {
+	margin-top: 0;
+}
+
+#wpvgw-task-window-button {
+	margin-top: 0.5em;
+	position: absolute;
+	bottom: 1em;
+	left: 1em;
+}
